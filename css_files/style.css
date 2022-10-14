@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 2000px;
+  overflow: auto;
+
+  background-color: #fafafa;
+
+  /*font-style: normal;
+  font-weight: 400;
+  font-size: 12px;*/
+}
+
+/*Bordas*/
+.barraVertical {
+  width: 1px;
+  height: 22px;
+  background: #dbdbdb;
+}
+/*--------------------------------------*/
+
+/*Ajustes ícones*/
+ion-icon {
+  font-size: 22px;
+}
+
+.setaStory {
+  color: white;
+  position: absolute;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  right: 5px;
+  z-index: 1;
+}
+
+.iconePubli {
+  font-size: 16px;
+}
+/*--------------------------------------*/
+
+/*Ajustes textuais*/
+.story h1 {
+  /*Coloca reticências no texto do perfil dos stories automaticamente*/
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden; /* "overflow" value must be different from "visible" */
+  text-overflow: ellipsis;
+  color: #262626;
+
+  font-size: 12px;
+}
+
+.publi h1 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 15px;
+
+  color: #262626;
+}
+
+.publi h2 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 15px;
+
+  color: #262626;
+}
+
+.sugestao h1 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #262626;
+}
+
+.sugestao h2 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #8e8e8e;
+}
+
+.curtida {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 5px;
+  color: #000000;
+}
+
+.curtida span {
+  font-weight: 500;
+}
+
+.sugPVc h1 {
+  width: 117px;
+  height: 15px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #8e8e8e;
+
+  display: flex;
+  align-items: center;
+}
+
+.sugPVc h2 {
+  width: 55px;
+  height: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #262626;
+
+  align-items: center;
+  text-align: right;
+}
+
+.sobreInstagram h1 {
+  font-size: 11px;
+  line-height: 13px;
+  color: #c7c7c7;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/*--------------------------------------*/
+
+/*Distribuição do espacço*/
+.SpaceAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.centVertHor {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.centVertHor2 {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centHor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centVert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centVert2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.centVert3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.espHoriz {
+  display: flex;
+  align-items: center;
+}
+.espHoriz2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.espDirPubli {
+  margin-right: 16px;
+}
+
+.espEsqPubli {
+  margin-left: 16px;
+}
+
+.espEsqPubli2 {
+  margin-left: 0px;
+}
+
+/*--------------------------------------*/
+
+/*Tudo do menu superior e inferior*/
+.barraSuperior {
+  width: 100%;
+  height: 54px;
+  background-color: #ffffff;
+  opacity: 0.95;
+  border-bottom: solid #dbdbdb 1px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.barraSuperiorMobile {
+  display: none; /*Nao vai aparecer qndo width>614px*/
+  width: 100%;
+  height: 54px;
+
+  background-color: #ffffff;
+  opacity: 0.95;
+  border-bottom: solid #dbdbdb 1px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pesquisar input {
+  width: 215px;
+  height: 26px;
+  background: #fafafa;
+  justify-content: center;
+  text-align: center;
+
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+
+  font-family: Roboto;
+  font-size: 12px;
+  color: #979797;
+}
+
+.e {
+  width: 146px;
+  height: 29px;
+}
+
+.d {
+  width: 148px;
+  height: 22px;
+}
+
+.barraInferiorMobile {
+  display: none; /*Nao vai mostrar quando width>614px*/
+  width: 100%;
+  height: 54px;
+  background-color: #ffffff;
+  opacity: 0.95;
+  border-bottom: solid #dbdbdb 1px;
+  margin-top: 20px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/*--------------------------------------*/
+
+/*Feed de Publicações*/
+main {
+  display: flex;
+  justify-content: center;
+
+  background: #fafafa;
+
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+/*--------------------------------------*/
+
+/*Canto esquerdo*/
+.cantoEsquerdo {
+  position: relative;
+}
+/*--------------------------------------*/
+
+/*Tudo sobre os stories*/
+.stories {
+  width: 614px;
+  height: 118px;
+  background: #ffffff;
+
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  position: relative;
+
+  margin-top: 34px;
+  margin-bottom: 24px;
+  gap: 14px;
+  padding-left: 18px;
+
+  /* Para atender as funcionalidades do projeto, é recomendado não utilizar os seguintes comandos:
+  width: 100%;  -> vai ajustar a tela, ou seja, ao adicionar mais itens, vai aumentar o limite da largura.
+  justify-content: space-around; -> vai fazer com que o espaço entre os itens fique bem apertado entre eles, pq procura encaixar todos os itens dentro do espaço limitado
+  justify-items: center; - não prejudica o código, mas tbm não ajuda */
+}
+
+.stories::-webkit-scrollbar {
+  display: none;
+}
+
+.story {
+  width: 66px;
+  /*height: 86px;*/
+  gap: 1px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-around;
+
+  position: relative;
+  cursor: pointer;
+
+  text-align: center;
+}
+
+.story .backgroundStories {
+  width: 66px;
+  height: 66px;
+}
+
+.perfilStories {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/*Tudo sobre as publicações*/
+
+.publicacoes {
+  display: flex;
+  flex-direction: column;
+  /*gap: 60px; - coloca uma margem de 60 px infeior e superior*/
+}
+.postagem {
+  widows: 100%;
+  /*height: 749px;*/
+  background: #ffffff;
+
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+
+  margin-bottom: 60px;
+}
+
+.parteSup {
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.publicador {
+  width: 300px;
+  height: 32px;
+}
+.fotoPublicador {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.opcoes {
+  width: 22px;
+  height: 24px;
+}
+
+.post {
+  width: 612px;
+
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  border: 1px 10px solid;
+}
+.post img,
+.post video {
+  width: 100%;
+}
+
+.parteInf {
+  height: 74px;
+}
+.ccc {
+  width: 93px;
+  height: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.salvar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.curtidas {
+  width: 333px;
+  height: 21px;
+}
+.fotoCurtiu {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+/*--------------------------------------*/
+
+/*side barr*/
+
+.cantoDireito {
+  width: 300px;
+  margin-left: 25px;
+}
+
+.sideBar {
+  position: fixed;
+  width: 300px;
+  height: 444px;
+  margin-top: 34px;
+}
+
+.meuPerfil {
+  width: 292px;
+  height: 57px;
+  margin-bottom: 30px;
+}
+
+.fotoPerfilSB {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+}
+
+.sugestoes {
+  width: 292px;
+  height: 255px;
+  margin-bottom: 30px;
+}
+
+.sugPVc {
+  width: 292px;
+  height: 14px;
+  /*margin-bottom: 17px;*/
+}
+
+.sugestao {
+  width: 292px;
+  height: 32px;
+}
+
+.pessoaSugerida {
+  width: auto;
+  height: 32px;
+}
+
+.seguir {
+  width: 60px;
+  height: 32px;
+}
+
+.seguir button {
+  width: 100%;
+  color: #ffffff;
+  background: #0f9bf7;
+  border-radius: 5px;
+  border: 0;
+}
+
+.sobreInstagram {
+  width: 292px;
+  height: 71px;
+}
+
+/*--------------------------------------*/
